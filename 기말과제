@@ -144,13 +144,10 @@ a:hover {
     text-decoration: underline;
 }
 
-// 모든 설명 보기/숨기기 버튼에 이벤트 리스너 추가
 document.querySelectorAll('.toggle-btn').forEach(button => {
     button.addEventListener('click', () => {
-        // 버튼과 같은 섹션에 있는 설명 요소를 찾음
         const description = button.nextElementSibling;
         
-        // 설명을 보이거나 숨김
         if (description.style.display === 'block') {
             description.style.display = 'none';
         } else {
