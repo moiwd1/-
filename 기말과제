@@ -78,7 +78,6 @@
 </body>
 </html>
 
-#CSS
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -145,7 +144,6 @@ a:hover {
     text-decoration: underline;
 }
 
-#javascript
 // 모든 설명 보기/숨기기 버튼에 이벤트 리스너 추가
 document.querySelectorAll('.toggle-btn').forEach(button => {
     button.addEventListener('click', () => {
