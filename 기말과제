@@ -78,3 +78,85 @@
 </body>
 </html>
 
+#CSS
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f7cbcb;
+    color: #eb9f9f;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+section.movie {
+    background: #fff;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    max-width: 600px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h3 {
+    color: #444;
+}
+
+button.toggle-btn {
+    background: #aa60e6;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+}
+
+button.toggle-btn:hover {
+    background: #ecb0e4;
+}
+
+.description {
+    display: none;
+    margin-top: 1rem;
+}
+
+.quote {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    border-left: 4px solid #ddc7e9;
+}
+
+a {
+    color: #f3b9e4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#javascript
+// 모든 설명 보기/숨기기 버튼에 이벤트 리스너 추가
+document.querySelectorAll('.toggle-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        // 버튼과 같은 섹션에 있는 설명 요소를 찾음
+        const description = button.nextElementSibling;
+        
+        // 설명을 보이거나 숨김
+        if (description.style.display === 'block') {
+            description.style.display = 'none';
+        } else {
+            description.style.display = 'block';
+        }
+    });
+});
